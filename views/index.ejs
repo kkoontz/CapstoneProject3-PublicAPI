@@ -1,0 +1,21 @@
+<%- include("partials/header") %>
+
+<section class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>HELLO WORLD : PUBLIC API</h1>
+      <form id="myForm" method="get" action="/getTickerBySymbol">
+        <label for="tickerInput">Ticker:</label>
+        <input type="text" id="tickerInput" name="ticker" required>
+        <input type="submit" value="Get Ticker">
+      </form>
+    </div>
+    <div class="col-md-12">
+      <p>
+        <%= content %>
+      </p>
+      </div>
+  </div>
+</section>
+
+<%- include("partials/footer") %>
