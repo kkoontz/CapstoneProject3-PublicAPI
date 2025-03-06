@@ -1,20 +1,56 @@
 <%- include("partials/header") %>
 
+<section class="header">
+  <div class="container">
+    <h1 class="app-title">Crypto Ticker Dashboard</h1>
+    <p class="text-white">Get real-time cryptocurrency ticker information from Blockchain.com</p>
+  </div>
+</section>
+
 <section class="container">
   <div class="row">
-    <div class="col-md-12">
-      <h1>HELLO WORLD : PUBLIC API</h1>
-      <form id="myForm" method="get" action="/getTickerBySymbol">
-        <label for="tickerInput">Ticker:</label>
-        <input type="text" id="tickerInput" name="ticker" required>
-        <input type="submit" value="Get Ticker">
-      </form>
-    </div>
-    <div class="col-md-12">
-      <p>
-        <%= content %>
-      </p>
+    <div class="col-md-8 offset-md-2">
+      <!-- Ticker Search Form -->
+      <div class="ticker-form">
+        <h2 class="mb-3">Search Ticker</h2>
+        
+        <div class="popular-tickers mb-3">
+          <span class="me-2">Popular:</span>
+          <button type="button" class="popular-ticker-btn" data-symbol="BTC-USD">BTC-USD</button>
+          <button type="button" class="popular-ticker-btn" data-symbol="ETH-USD">ETH-USD</button>
+          <button type="button" class="popular-ticker-btn" data-symbol="BCH-USD">BCH-USD</button>
+          <button type="button" class="popular-ticker-btn" data-symbol="LTC-USD">LTC-USD</button>
+        </div>
+        
+        <form id="tickerForm" method="get" action="/api/ticker">
+          <div class="mb-3">
+            <label for="tickerInput" class="form-label">Enter Ticker Symbol:</label>
+            <input type="text" class="form-control ticker-input" id="tickerInput" name="ticker" placeholder="e.g. BTC-USD" required>
+            <div class="form-text">Enter a valid cryptocurrency ticker symbol (e.g., BTC-USD, ETH-USD)</div>
+          </div>
+          <div class="d-flex align-items-center">
+            <button type="submit" class="btn btn-primary">
+              Get Ticker Data
+            </button>
+            <div id="loadingSpinner" class="loading-spinner ms-3" style="display: none;"></div>
+          </div>
+        </form>
       </div>
+      
+      <!-- Results Container -->
+      <div id="resultsContainer">
+        <% if (typeof content !== 'undefined' && content !== "Waiting for user input...") { %>
+          <div class="ticker-card">
+            <pre><%= content %></pre>
+          </div>
+        <% } else { %>
+          <div class="market-summary">
+            <h3 class="market-summary-title">Market Summary</h3>
+            <p>Use the form above to search for cryptocurrency ticker information. You'll see detailed price, volume, and market data for your selected cryptocurrency.</p>
+          </div>
+        <% } %>
+      </div>
+    </div>
   </div>
 </section>
 

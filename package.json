@@ -1,18 +1,24 @@
 {
-  "name": "capstone-project-3-use-a-public-api",
+  "name": "crypto-ticker-dashboard",
   "version": "1.0.0",
-  "description": "learn how to use public api",
+  "description": "A dashboard for cryptocurrency ticker information using Blockchain.com API",
   "license": "ISC",
   "author": "kevin koontz",
   "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "axios": "^1.8.1",
+    "chalk": "^5.3.0",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
