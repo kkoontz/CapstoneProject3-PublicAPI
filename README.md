@@ -2,7 +2,7 @@
 
 A modern web application that displays real-time cryptocurrency ticker information using the Blockchain.com API.
 
-![Crypto Ticker Dashboard]
+![Crypto Ticker Dashboard]!
 
 ## Features
 
@@ -32,8 +32,8 @@ A modern web application that displays real-time cryptocurrency ticker informati
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/crypto-ticker-dashboard.git
-   cd crypto-ticker-dashboard
+   git clone https://github.com/kkoontz/CapstoneProject3-PublicAPI.git
+   cd CapstoneProject3-PublicAPI
    ```
 
 2. Install dependencies:
