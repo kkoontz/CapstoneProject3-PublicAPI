@@ -2,7 +2,7 @@
 
 A modern web application that displays real-time cryptocurrency ticker information using the Blockchain.com API.
 
-![Crypto Ticker Dashboard](https://via.placeholder.com/800x400?text=Crypto+Ticker+Dashboard)
+![Crypto Ticker Dashboard]
 
 ## Features
 
